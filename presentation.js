@@ -1,20 +1,3 @@
-// function birthDayCount() {
-//     /*ページを読み込んだ時刻=現在日時*/
-//     var loadDate = new Date();
-//     /*計算の基準となる日時*/
-//     var distDate = new Date(2022, 8, 14);
-//     /*日時の差をミリ秒単位で取得*/
-//     var diffMilliSec = distDate - loadDate;
-//     /*ミリ秒を日数に変換*/
-//     var diffDays = parseInt(diffMilliSec / 1000 / 60 / 60 / 24);
-//     /*差の日数をHTMLに表示*/
-//     document.getElementById('diff').textContent = diffDays;
-// }
-
-// birthDayCount();
-
-
-
 const clock = () => {
     // 現在の日時・時刻の情報を取得
     const d = new Date();
@@ -51,8 +34,6 @@ const clock = () => {
     document.querySelector(".clock-time").innerText = time;
 };
 
-
-
 // function alertButton() {
 //     const gatya = document.getElementsByClassName("gatya")[0];
 //     gatya.style.display = "block";
@@ -60,16 +41,16 @@ const clock = () => {
 // }
 function getRanmaru() {
     const idList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
-    const imglist = ["<a href='https://ibb.co/5n8Lq62'><img src='https://i.ibb.co/MGV7qs9/0-ranmaru-sleep-edited.jpg' alt='0-ranmaru-sleep-edited' border='0'></a>",
-        "<a href='https://ibb.co/1LcpRBd'><img src='https://i.ibb.co/L8Kq9BJ/1-ranmaru-baby-edited.jpg' alt='1-ranmaru-baby-edited' border='0'></a>",
-        "<a href='https://ibb.co/SB6WNLr'><img src='https://i.ibb.co/7KS8v94/2-ranmaru-baby2-edited.jpg' alt='2-ranmaru-baby2-edited' border='0'></a>",
-        "<a href='https://imgbb.com/'><img src='https://i.ibb.co/nrLnyGX/3-ranmaru-baby3-edited.jpg' alt='3-ranmaru-baby3-edited' border='0'></a>",
-        "<a href='https://ibb.co/6BjQd5j'><img src='https://i.ibb.co/bJctfnc/4-ranmaru-best-edited.jpg' alt='4-ranmaru-best-edited' border='0'></a>",
-        "<a href='https://ibb.co/T8RWtb5'><img src='https://i.ibb.co/r6MdHcJ/5-ranmaru-sleep2-edited.jpg' alt='5-ranmaru-sleep2-edited' border='0'></a>",
-        "<a href='https://ibb.co/LJCvVGK'><img src='https://i.ibb.co/mXHSfxp/6-ranmaru-style-edited.jpg' alt='6-ranmaru-style-edited' border='0'></a>",
-        "<a href='https://ibb.co/SNYzVQn'><img src='https://i.ibb.co/D4cZwGC/7-ranmaru-zbtn-edited.jpg' alt='7-ranmaru-zbtn-edited' border='0'></a>",
-        "<a href='https://ibb.co/THdM7qH'><img src='https://i.ibb.co/Q6tvTj6/8-ranmaru-sidef-edited.jpg' alt='8-ranmaru-sidef-edited' border='0'></a>",
-        "<a href='https://ibb.co/6XwSPyF'><img src='https://i.ibb.co/z6xgRmZ/9-ranmaru-walk-edited.jpg' alt='9-ranmaru-walk-edited' border='0'></a>"];
+    const imglist = ["<img src='https://i.ibb.co/hWwFs8G/3-ranmaru-baby3-edited.jpg' width='500px' height='500px' alt='3-ranmaru-baby3-edited' border='0'>",
+                    "<img src='https://i.ibb.co/98qZ3gG/4-ranmaru-best-edited.jpg' width='500px' height='500px' alt='4-ranmaru-best-edited' border='0'>",
+                    "<img src='https://i.ibb.co/8bw45bW/5-ranmaru-sleep2-edited.jpg' width='500px' height='500px' alt='5-ranmaru-sleep2-edited' border='0'>",
+                    "<img src='https://i.ibb.co/MNfKbd6/6-ranmaru-style-edited.jpg' width='500px' height='500px' alt='6-ranmaru-style-edited' border='0'>",
+                    "<img src='https://i.ibb.co/L8GM8NW/7-ranmaru-zbtn-edited.jpg' width='500px' height='500px' alt='7-ranmaru-zbtn-edited' border='0'>",
+                    "<img src='https://i.ibb.co/zRWLpYT/8-ranmaru-sidef-edited.jpg' width='500px' height='500px' alt='8-ranmaru-sidef-edited' border='0'>",
+                    "<img src='https://i.ibb.co/1MZTQLg/9-ranmaru-walk-edited.jpg' width='500px' height='500px' alt='9-ranmaru-walk-edited' border='0'>",
+                    "<img src='https://i.ibb.co/rcn3XYg/0-ranmaru-sleep-edited.jpg' width='500px' height='500px' alt='0-ranmaru-sleep-edited' border='0'>",
+                    "<img src='https://i.ibb.co/YjCJY3d/1-ranmaru-baby-edited.jpg' width='500px' height='500px' alt='1-ranmaru-baby-edited' border='0'>",
+                    "<img src='https://i.ibb.co/sjRVQzz/2-ranmaru-baby2-edited.jpg' width='500px' height='500px' alt='2-ranmaru-baby2-edited' border='0'>"];
     let select = Math.floor(Math.random() * imglist.length);
     document.getElementById(idList[select]).style.visibility = "visible";
     return imglist[select];
