@@ -31,14 +31,22 @@ body {
 }
 
 h1 {
+    font-size:300%;
     text-align: center;
     color: burlywood;
+    margin: auto;
 }
 
 .pageArea {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+}
+
+.titleText{
+    font-size: xx-large;
+    background-color: burlywood;
+    color: black;
 }
 
 
@@ -81,6 +89,15 @@ h1 {
 img.gatya{
     width: 500px;
     height: 500px;
+}
+
+#button1{
+    font-size: 1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: auto;
+    padding: 10px 32px;
 }
 
 .comment {
