@@ -1,49 +1,118 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="jp">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <script type="text/javascript" src="modules/lodash.min.js"></script>
-    <script type="text/javascript" src="modules/test-boilerplate.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <meta charset="UTF-8">
+    <title>らんまるの部屋</title>
+    <!--リセットCSS読み込み-->
+    <!-- <link rel="stylesheet" href="http://unpkg.com/ress/dist/ress.min/css"> -->
+    <!--自分の作成したCSSの読み込み-->
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
 <body>
-    <h1>DIG プログラミング基礎</h1>
-    <h2>Mac をお使いの方は、 <font color="blue"> Cmd + Option + J</font><br>
-        Windows/Linux をお使いの方は、 <font color="blue"> Control+Shift+J</font> <br>
-        をクリックして、デベロッパーツールを開いてください。</h2>
-    <h2>下記にユニコーンの画像が表示されていれば成功です！</h2>
-    <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif">
-    <a href="https://ibb.co/5n8Lq62"><img src="https://i.ibb.co/MGV7qs9/0-ranmaru-sleep-edited.jpg"
-            alt="0-ranmaru-sleep-edited" border="0"></a>
-    <a href="https://ibb.co/1LcpRBd"><img src="https://i.ibb.co/L8Kq9BJ/1-ranmaru-baby-edited.jpg"
-            alt="1-ranmaru-baby-edited" border="0"></a>
-    <a href="https://ibb.co/SB6WNLr"><img src="https://i.ibb.co/7KS8v94/2-ranmaru-baby2-edited.jpg"
-            alt="2-ranmaru-baby2-edited" border="0"></a>
-    <a href="https://imgbb.com/"><img src="https://i.ibb.co/nrLnyGX/3-ranmaru-baby3-edited.jpg"
-            alt="3-ranmaru-baby3-edited" border="0"></a>
-    <a href="https://ibb.co/6BjQd5j"><img src="https://i.ibb.co/bJctfnc/4-ranmaru-best-edited.jpg"
-            alt="4-ranmaru-best-edited" border="0"></a>
-    <a href="https://ibb.co/T8RWtb5"><img src="https://i.ibb.co/r6MdHcJ/5-ranmaru-sleep2-edited.jpg"
-            alt="5-ranmaru-sleep2-edited" border="0"></a>
-    <a href="https://ibb.co/LJCvVGK"><img src="https://i.ibb.co/mXHSfxp/6-ranmaru-style-edited.jpg"
-            alt="6-ranmaru-style-edited" border="0"></a>
-    <a href="https://ibb.co/SNYzVQn"><img src="https://i.ibb.co/D4cZwGC/7-ranmaru-zbtn-edited.jpg"
-            alt="7-ranmaru-zbtn-edited" border="0"></a>
-    <a href="https://ibb.co/THdM7qH"><img src="https://i.ibb.co/Q6tvTj6/8-ranmaru-sidef-edited.jpg"
-            alt="8-ranmaru-sidef-edited" border="0"></a>
-    <a href="https://ibb.co/6XwSPyF"><img src="https://i.ibb.co/z6xgRmZ/9-ranmaru-walk-edited.jpg"
-            alt="9-ranmaru-walk-edited" border="0"></a>
-    <a href="https://imgbb.com/"><img src="https://i.ibb.co/DzvzcRg/funny-anime-gif-14.gif" alt="funny-anime-gif-14"
-            border="0"></a>
-    <a href="https://ibb.co/FVv3mjR"><img src="https://i.ibb.co/nC2m65x/ranmaru-etuko-edited.jpg"
-            alt="ranmaru-etuko-edited" border="0"></a>
-    <a href="https://ibb.co/CKFFXjz"><img src="https://i.ibb.co/r2JJLBm/ranmaru-sleep3-edited.jpg"
-            alt="ranmaru-sleep3-edited" border="0"></a>
-    <h3>30分悩んで進まなくなったら…helpチャンネルで質問してみましょう！</h3>
+    <div class="clock">
+        <p class="clock-date"></p><!-- 時計の日付テキスト -->
+        <p class="clock-time"></p><!-- 時計の時間テキスト -->
+    </div>
+    <h1>らんまるガチャ!!</h1>
+    <div class="pageArea">
+        <div id="prof">
+            <p>プロフィール</p>
+            <img class="profaImg" src="ranmaru_etuko_edited.jpg" width="200px" height="200px" alt="プロフ">
+            <p>
+                らんまる<br>
+                スコティッシュフォールド<br>
+                垂れ耳 女の子<br>
+                2020年 8月14日生まれ
+            </p>
+            <p id="diff"></p>
+        </div>
+        <div id="main">
+            <p>ガチャ画面</p>
+            <img class="top" src="funny-anime-gif-14.gif" alt="ねこ"><br>
+            <input id="button1" type="button" value="ガチャる" onclick="alertButton()"><br>
+            <br>
+            <h2>ガチャ結果</h2><br>
+            <article id="gatyaBox">
+
+            </article>
+            <!-- <script type="text/javascript">
+                const imglist = [
+                    "0_ranmaru_sleep_edited.jpg",
+                    "1_ranmaru_baby_edited.jpg",
+                    "2_ranmaru_baby2_edited.jpg",
+                    "3_ranmaru_baby3_edited.jpg"];
+                let selectnum = Math.floor(Math.random() * imglist.length);
+                let output = "<img" + " class='gatya' " + "src=" + imglist[selectnum] + " width='400px' height='400px'alt='0'>";
+                const x = document.write(output);
+                console.log(x);
+            </script> -->
+            
+
+            <div class="comment">
+                <h2 class="page-title">comment</h2>
+                <form action="" method="post" name="form">
+                    <div>
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="yoreName">
+                    </div>
+                    <div>
+                        <label for="message">メッセージ</label>
+                        <textarea type="message" id="message" name="yoreMessage"></textarea>
+                    </div>
+                    <input type="button" class="button" onclick="submidForm()" value="送信" name="submitButton">
+                </form>
+            </div><!--/.wrapper-->
+            <ul id = "commentBox"></ul>
+        </div>
+        <div id="collection">
+            <p>コレクション</p>
+            <ul class="collectionList">
+                <ul id="a">
+                    <a href="https://ibb.co/5n8Lq62"><img src="https://i.ibb.co/MGV7qs9/0-ranmaru-sleep-edited.jpg" width="150px" height="150px"
+                        alt="0-ranmaru-sleep-edited" border="0"></a>
+                </ul>
+                <ul id="b">
+                    <a href="https://ibb.co/1LcpRBd"><img src="https://i.ibb.co/L8Kq9BJ/1-ranmaru-baby-edited.jpg" width="150px" height="150px"
+                        alt="1-ranmaru-baby-edited" border="0"></a>
+                </ul>
+                <ul id="c">
+                    <a href="https://ibb.co/SB6WNLr"><img src="https://i.ibb.co/7KS8v94/2-ranmaru-baby2-edited.jpg" width="150px" height="150px"
+                        alt="2-ranmaru-baby2-edited" border="0"></a>
+                </ul>
+                <ul id="d">
+                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/nrLnyGX/3-ranmaru-baby3-edited.jpg" width="150px" height="150px"
+                        alt="3-ranmaru-baby3-edited" border="0"></a>
+                </ul>
+                <ul id="e">
+                    <a href="https://ibb.co/6BjQd5j"><img src="https://i.ibb.co/bJctfnc/4-ranmaru-best-edited.jpg" width="150px" height="150px"
+                        alt="4-ranmaru-best-edited" border="0"></a>
+                </ul>
+                <ul id="f">
+                    <a href="https://ibb.co/T8RWtb5"><img src="https://i.ibb.co/r6MdHcJ/5-ranmaru-sleep2-edited.jpg" width="150px" height="150px"
+                        alt="5-ranmaru-sleep2-edited" border="0"></a>
+                </ul>
+                <ul id="g">
+                    <a href="https://ibb.co/LJCvVGK"><img src="https://i.ibb.co/mXHSfxp/6-ranmaru-style-edited.jpg" width="150px" height="150px"
+                        alt="6-ranmaru-style-edited" border="0"></a>
+                </ul>
+                <ul id="h">
+                    <a href="https://ibb.co/SNYzVQn"><img src="https://i.ibb.co/D4cZwGC/7-ranmaru-zbtn-edited.jpg" width="150px" height="150px"
+                        alt="7-ranmaru-zbtn-edited" border="0"></a>
+                </ul>
+                <ul id="i">
+                    <a href="https://ibb.co/THdM7qH"><img src="https://i.ibb.co/Q6tvTj6/8-ranmaru-sidef-edited.jpg" width="150px" height="150px"
+                        alt="8-ranmaru-sidef-edited" border="0"></a>
+                </ul>
+                <ul id="j">
+                    <a href="https://ibb.co/6XwSPyF"><img src="https://i.ibb.co/z6xgRmZ/9-ranmaru-walk-edited.jpg" width="150px" height="150px"
+                        alt="9-ranmaru-walk-edited" border="0"></a>
+                </ul>
+            </ul>
+        </div>
+    </div>
 </body>
+<script src="presentation.js"></script>
 
 </html>
