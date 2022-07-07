@@ -1,0 +1,180 @@
+body {
+    margin: 0%;
+    text-align: center;
+}
+
+.clock {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0%;
+    color: #daf6ff;
+    /* 文字の色 */
+    text-shadow: 0 0 20px #0aafe6;
+    /* 文字を発光させる */
+    line-height: 1;
+    /* 文字の高さ */
+    text-align: center;
+    /*文字を中央に寄せる*/
+}
+
+/* 日付のスタイル */
+.clock-date {
+    font-size: 25px;
+    margin-top: 0%;
+    margin-bottom: 10px;
+}
+
+/* 時間のスタイル */
+.clock-time {
+    font-size: 50px;
+    margin: 0%;
+}
+
+h1 {
+    text-align: center;
+    color: burlywood;
+}
+
+.pageArea {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+#main {
+    width: 50%;
+    order: 2;
+    border: double 4px black;
+
+}
+
+#main .top {
+    align-items: center;
+}
+
+#prof {
+    width: 21%;
+    order: 1;
+    border: double 4px black;
+}
+
+#collection {
+    width: 25%;
+    order: 3;
+    border: double 4px black;
+    /* border-style: double 3px black; */
+}
+
+.collectionList {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    padding: 0% 5%;
+}
+
+.collectionList ul {
+    padding: 0% 5%
+}
+
+img.gatya{
+    width: 500px;
+    height: 500px;
+}
+
+.comment {
+    background-image: url(ranmaru_sleep3_edited.jpg);
+    background-size: cover;
+    min-height: 20vh;
+    color: #0bd;
+    text-shadow: 0 0 20px white;
+    margin-bottom: 20px;
+}
+
+/* フォーム */
+form div {
+    margin-bottom: 14px;
+}
+
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 240px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem;
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.button{
+    font-size: 1.375rem;
+    background: #0bd;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: auto;
+    padding: 10px 32px;
+}
+
+#commentBox {
+    background-color: #6ab7eb;
+    background-size: cover;
+    text-align:left;
+    font-size:xx-large;
+    color:black;
+}
+/* visible or hidden*/
+#a{
+    visibility: hidden;
+}
+#b{
+    visibility: hidden;
+}
+#c{
+    visibility: hidden;
+}
+#d{
+    visibility: hidden;
+}
+#e{
+    visibility: hidden;
+}
+#f{
+    visibility: hidden;
+}
+#g{
+    visibility: hidden;
+}
+#h{
+    visibility: hidden;
+}
+#i{
+    visibility: hidden;
+}
+#j{
+    visibility: hidden;
+}
